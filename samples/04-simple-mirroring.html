@@ -200,6 +200,8 @@ found in the LICENSE file.
             // Only use preserveDrawingBuffer if we have an external display to
             // mirror to.
             initWebGL(vrDisplay.capabilities.hasExternalDisplay);
+
+            onVRRequestPresent();
           } else {
             initWebGL(false);
             VRSamplesUtil.addInfo("WebVR supported, but no VRDisplays found.", 3000);
